@@ -1,17 +1,7 @@
 +++
-title = "About Hugo"
-date = "2014-04-09"
+title = "About Barney"
+date = "2020-06-10"
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
-
-It makes use of a variety of open source projects including:
-
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Barney is studying Mathematics at The University of Leeds and is currently working on [Effective Quadratures](https://github.com/Effective-Quadratures/Effective-Quadratures) with funding from [Google](https://summerofcode.withgoogle.com/projects/#5447503668838400).
 
