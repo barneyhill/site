@@ -1,7 +1,6 @@
 ---
 title: "My Google Summer of Code Proposal"
-date: 2020-03-26
-draft: true
+date: 2020-03-31
 ---
 
 # Implementing polynomial regression trees in Effective Quadratures
