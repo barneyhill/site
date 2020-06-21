@@ -1,9 +1,8 @@
 ---
-title: "My Google Summer of Code Proposal"
+title: "Implementing polynomial regression trees in Effective Quadratures - My Google Summer of Code Proposal"
 date: 2020-03-31
 ---
 
-# Implementing polynomial regression trees in Effective Quadratures
 ## Summary
 Effective Quadratures is an open source library used to generate polynomials for parametric computational studies. Among the applications of the library is the ability to perform polynomial regression on a dataset. I propose an implementation of a polynomial regression tree class in Effective Quadratures which will offer greater accuracy when extrapolating compared to the current polynomial regression class.
 
