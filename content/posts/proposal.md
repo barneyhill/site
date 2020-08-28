@@ -20,8 +20,11 @@ I plan to mainly base my core implementation of the tree on [Anson Wong’s mode
 
 ### Model statistics (optional)
 By using a model composed of many orthogonal polynomial functions, moments and sensitivities can be calculated from each individual function. This means that the user will be able to select a subset of the input parameters and be given combined summary statistics from the polynomials. For this I will implement the methods:
+
 -   ```get_mean_and_variance(lower,upper)```
+
 -   ```get_skewness_and_kurtosis(lower,upper)```
+
 -   ```get_sobol_indicies(highest_sobol_order_to_compute, lower, upper)```
 
 All methods will allow the user to specify a range over which the statistics should be calculated.
