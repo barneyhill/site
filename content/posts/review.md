@@ -23,19 +23,21 @@ By the end of the first phase, significant progress had been made and we had met
 
 ![Phase2](/Phase2.png)
 
-Having finished all the proposal requirements the month of phase 2 was spent addressing the issue of performance. When running PolyTree on large datasets it had become apparent that it wasn't computationally feasible to fit many thousands of polynomials and so a more efficient split criterion had to be found. In the end we decided to use a standard deviation split criterion used in the M5 algorithm seen below.
+Having finished all the proposal requirements, the month of phase 2 was spent addressing the issue of performance. When running PolyTree on large datasets it had become apparent that it wasn't computationally feasible to fit many thousands of polynomials and so a more efficient split criterion had to be found. We ultimately decided to use a standard deviation split criterion used in the M5 algorithm seen below.
 
 ## 																			Polynomial loss Criterion:		$\frac{N_L \cdot \text{PolyLoss}(X_L,y_L) + N_R \cdot \text{PolyLoss}(X_R,y_R)}{N}$ 							
 
 ## 																			Standard Deviation Criterion:		$\sigma(y)-\frac{N_L \cdot \sigma(y_L) + N_R \cdot \sigma(y_R)}{N}$  
 
-In the end we made the decision to include two different "tree types" in PolyTree. The first, ```tree_type="classic"```, would be for users who are either willing to wait or have a small dataset. Meanwhile ```tree_type="m5p"``` would be used by someone dealing with "big data" who has limited resources and so is willing to accept a small compromise in the accuracy of their model. The "m5p" tree type differs not only in it's split criterion but also in its construction, the tree is greedily expanded before being pruned back if no improvement in loss is made. 
+In the end we made the decision to include two different "tree types" in PolyTree. The first, ```tree_type="model_aware"```, would be for users who are either willing to wait or have a small dataset. Meanwhile ```tree_type="model_agnostic"``` would be used by someone dealing with "big data" who has limited resources and so is willing to accept a small compromise in the accuracy of their model. The "m5p" tree type differs not only in it's split criterion but also in its construction, the tree is greedily expanded before being pruned back if no improvement in loss is made. 
 
 
 
 ## Phase 3
 
-Having met the scope of the project in the first two phases, Phase 3 was mostly spent ensuring the class was easy to use. For example many optimisations, input validation and an adjustment of the default parameters were completed. Additionally we decided to separate out the pruning process in the "m5p" tree into a ```prune(X,y)``` method which could be used to prune any tree with held-out data, reducing the complexity of the model while maintaining or improving it's accuracy.  
+Having met the scope of the project in the first two phases, Phase 3 was spent ensuring the class was easy to use as well as competitive with state-of-the-art tree models. For example many optimisations, input validation and an adjustment of the default parameters were completed. Additionally we decided to separate out the pruning process in the "m5p" tree into a ```prune(X,y)``` method which could be used to prune any tree with held-out data, reducing the complexity of the model while maintaining or improving it's accuracy.  
+
+![final_tree_comparison](/final_tree_comparison.png)
 
 Another feature added was smoothing. Instead of making a prediction from a polynomial in a terminal node, smoothing combines several predictions of parent node's polynomials. When combined these two features make a significant improvement in the accuracy by improving upon the issue of over-fitting in the model.
 
@@ -58,6 +60,5 @@ I would like to give an enormous thank you to my mentors Pranay Seshadri, Ashley
 ## Pull Requests to Effective Quadratures (develop)
 
 * https://github.com/Effective-Quadratures/Effective-Quadratures/pull/229
-
 * https://github.com/Effective-Quadratures/Effective-Quadratures/pull/240
-* FINAL TO BE ADDED
+* https://github.com/Effective-Quadratures/Effective-Quadratures/pull/251
